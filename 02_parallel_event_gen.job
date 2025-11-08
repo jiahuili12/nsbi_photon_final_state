@@ -1,0 +1,79 @@
+executable = 02_parallel_event_gen.sh
+request_cpus = 1
++MaxRunTime = 3*60*60
+output = eventlogs/event_output_$(arguments)$(bsm_id).$(CLUSTER).$(PROCESS).txt
+error = eventlogs/event_error_$(arguments)$(bsm_id).$(CLUSTER).$(PROCESS).txt
+log = eventlogs/event_log_$(arguments)$(bsm_id).$(CLUSTER).$(PROCESS).txt
+environment = "PROCESS=$(PROCESS) CLUSTER=$(CLUSTER)"
+
+# Transfer the MadGraph tar file to each job
+transfer_input_files = madgraph.tar.gz
+
+# Queue entries for different generation types
+# Signal generation (20 runs for 14 TeV)
+#arguments = signal
+#queue 10
+
+# Background generation (160 runs for 14 TeV)
+#arguments = background
+#queue 20
+
+# BSM generation for failed events only - overwriting existing directories
+# Failed events identified from the output:
+# signal_supp_13/morphing_basis_vector_8
+arguments = bsm 8 13
+queue 1
+# signal_supp_20/morphing_basis_vector_5
+arguments = bsm 5 20
+queue 1
+# signal_supp_1/morphing_basis_vector_1
+arguments = bsm 1 1
+queue 1
+# signal_supp_11/morphing_basis_vector_7
+arguments = bsm 7 11
+queue 1
+# signal_supp_11/morphing_basis_vector_2
+arguments = bsm 2 11
+queue 1
+# signal_supp_17/morphing_basis_vector_3
+arguments = bsm 3 17
+queue 1
+# signal_supp_5/morphing_basis_vector_6
+arguments = bsm 6 5
+queue 1
+# signal_supp_7/morphing_basis_vector_2
+arguments = bsm 2 7
+queue 1
+# signal_supp_2/morphing_basis_vector_2
+arguments = bsm 2 2
+queue 1
+# signal_supp_2/morphing_basis_vector_3
+arguments = bsm 3 2
+queue 1
+# signal_supp_6/morphing_basis_vector_3
+arguments = bsm 3 6
+queue 1
+# signal_supp_19/morphing_basis_vector_2
+arguments = bsm 2 19
+queue 1
+# signal_supp_19/morphing_basis_vector_3
+arguments = bsm 3 19
+queue 1
+# signal_supp_19/morphing_basis_vector_9
+arguments = bsm 9 19
+queue 1
+# signal_supp_18/morphing_basis_vector_8
+arguments = bsm 8 18
+queue 1
+# signal_supp_18/morphing_basis_vector_1
+arguments = bsm 1 18
+queue 1
+# signal_supp_9/morphing_basis_vector_6
+arguments = bsm 6 9
+queue 1
+# signal_supp_12/morphing_basis_vector_3
+arguments = bsm 3 12
+queue 1
+# signal_supp_12/morphing_basis_vector_1
+arguments = bsm 1 12
+queue 1

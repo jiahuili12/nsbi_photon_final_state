@@ -1,0 +1,19 @@
+executable = 02_event_gen.sh
+request_cpus = 16
+MaxRunTime = 1*60*60
+output = eventlogs/event_output_$(arguments)$(bsm_id).$(CLUSTER).txt
+error = eventlogs/event_error_$(arguments)$(bsm_id).$(CLUSTER).txt
+log = eventlogs/event_log_$(arguments)$(bsm_id).$(CLUSTER).txt
+
+# Queue entries for different generation types
+# Signal generation (20 runs for 14 TeV)
+arguments = signal
+queue
+
+# Background generation (160 runs for 14 TeV)
+arguments = background
+queue
+
+# BSM generation for each bsm_id (1-9) with 10 runs each for 14 TeV
+arguments = bsm
+queue bsm_id in 1,2,3,4,5,6,7,8,9
