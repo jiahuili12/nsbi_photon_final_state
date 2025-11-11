@@ -1,0 +1,37 @@
+# Data setup (step 1)
+data_dir: /vols/cms/jl3222/nsbi_photon_final_state/data
+morphing_setup: /vols/cms/jl3222/nsbi_photon_final_state/data/setup.h5
+
+#step2
+madgraph:
+  dir: /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1
+  n_runs: 2
+  output_dir: /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes
+  energy: 14
+
+  # Delphes (step 3)
+delphes:
+  # 这里是你整理过的事件母目录，脚本会在其下查找：
+  #   <process_code>/batch_<i>/run_XX[_decayed_1]
+  input_dir_prefix: /vols/cms/jl3222/nsbi_photon_final_state/03_events
+  # Delphes 分析后的 .h5 输出前缀（不要加扩展名）
+  output_file: /vols/cms/jl3222/nsbi_photon_final_state/04_post_delphes/delphes
+  # 汇总/合并后长期保存位置
+  long_term_storage_dir: /vols/cms/jl3222/nsbi_photon_final_state/04_post_delphes
+
+
+  # Sampling (step 4)
+sampling:
+  input_dir: /vols/cms/jl3222/nsbi_photon_final_state/04_post_delphes
+  output_dir: /vols/cms/jl3222/nsbi_photon_final_state/05_samples
+
+# Plotting
+plotting:
+  fancy_name:
+    c0: $c_{\phi}$
+    c1: $c_{\phi d}$
+    c2: $c_{t \phi}$
+  color:
+    c0: red
+    c1: blue
+    c2: green
