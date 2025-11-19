@@ -1,0 +1,43 @@
+# ---------------------------
+# MadGraph / MadMiner / Delphes outputs
+# ---------------------------
+
+# MadGraph events and intermediate output
+**/Events/
+**/HTML/
+**/decay_*/
+**/rw_me/
+**/SubProcesses/
+**/Source/
+**/Cards/run_*_banner.txt
+**/unweighted_events.lhe
+**/unweighted_events.lhe.gz
+
+# Delphes output
+*.root
+*_delphes.root
+
+# Pythia8
+*.hepmc
+*.hepmc.gz
+
+# Logs and debug
+logs/
+**/*.log
+ME5_debug
+debug.log
+py.py
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/
+
+# Other temporary / large data
+*.dat
+
