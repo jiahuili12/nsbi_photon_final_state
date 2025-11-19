@@ -1,0 +1,600 @@
+************************************************************
+*                                                          *
+*                     W E L C O M E to                     *
+*              M A D G R A P H 5 _ a M C @ N L O           *
+*                                                          *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*              http://madgraph.phys.ucl.ac.be/             *
+*                            and                           *
+*            http://amcatnlo.web.cern.ch/amcatnlo/         *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*           Type 'tutorial' to learn how MG5 works         *
+*    Type 'tutorial aMCatNLO' to learn how aMC@NLO works   *
+*    Type 'tutorial MadLoop' to learn how MadLoop works    *
+*                                                          *
+************************************************************
+load MG5 configuration from ../../../../../vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/input/mg5_configuration.txt 
+fastjet-config does not seem to correspond to a valid fastjet-config executable (v3+). We will use fjcore instead.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/fastjet-config (including fastjet-config).
+ MG5_aMC> set fastjet /PATH/TO/fastjet-config
+
+eMELA-config does not seem to correspond to a valid eMELA-config executable.
+ Please set the 'fastjet'variable to the full (absolute) /PATH/TO/eMELA-config (including eMELA-config).
+ MG5_aMC> set eMELA /PATH/TO/eMELA-config
+
+set ninja to /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/HEPTools/lib
+set collier to /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/HEPTools/lib
+set lhapdf to /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+None does not seem to correspond to a valid lhapdf-config executable. 
+Please set the 'lhapdf' variable to the (absolute) /PATH/TO/lhapdf-config (including lhapdf-config).
+Note that you can still compile and run aMC@NLO with the built-in PDFs
+ MG5_aMC> set lhapdf /PATH/TO/lhapdf-config
+
+[1;34m
+    A Pythia8 path is specified via the option 'pythia8_path' but no path for option
+    'mg5amc_py8_interface_path' is specified. This means that Pythia8 cannot be used
+    leading order simulations with MadEvent.
+    Consider installing the MG5_aMC-PY8 interface with the following command:
+     MG5_aMC>install mg5amc_py8_interface
+    [0m
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+Using default eps viewer "evince". Set another one in ./input/mg5_configuration.txt
+Using default web browser "firefox". Set another one in ./input/mg5_configuration.txt
+import /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/madminer/cards/mg_commands_0.dat
+The import format was not given, so we guess it as command
+launch /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm
+************************************************************
+*                                                          *
+*                      W E L C O M E to                    *
+*             M A D G R A P H 5 _ a M C @ N L O            *
+*                      M A D E V E N T                     *
+*                                                          *
+*                 *                       *                *
+*                   *        * *        *                  *
+*                     * * * * 5 * * * *                    *
+*                   *        * *        *                  *
+*                 *                       *                *
+*                                                          *
+*         VERSION 3.5.1                 2023-07-11         *
+*                                                          *
+*    The MadGraph5_aMC@NLO Development Team - Find us at   *
+*    https://server06.fynu.ucl.ac.be/projects/madgraph     *
+*                                                          *
+*               Type 'help' for in-line help.              *
+*                                                          *
+************************************************************
+INFO: load configuration from /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Cards/me5_configuration.txt  
+INFO: load configuration from /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/input/mg5_configuration.txt  
+INFO: load configuration from /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Cards/me5_configuration.txt  
+Using default text editor "vi". Set another one in ./input/mg5_configuration.txt
+generate_events run_01
+The following switches determine which programs are run:
+/=================== Description ===================|============= values ==============|======== other options ========\
+| 1. Choose the shower/hadronization program        | [1m       shower[0m = [32mPythia8[0m           |     OFF                       |
+| 2. Choose the detector simulation program         | [1m     detector[0m = [31mOFF[0m               |     Delphes                   |
+| 3. Choose an analysis package (plot/convert)      | [1m     analysis[0m = [01mNot Avail.[0m        |     Please install module     |
+| 4. Decay onshell particles                        | [1m      madspin[0m = [32mON[0m                |     onshell|full|OFF          |
+| 5. Add weights to events for new hypp.            | [1m     reweight[0m = [32mON[0m                |     OFF                       |
+\=======================================================================================================================/
+Either type the switch number (1 to 5) to change its setting,
+Set any switch explicitly (e.g. type 'shower=OFF' at the prompt)
+Type 'help' for the list of all valid option
+Type '0', 'auto', 'done' or just press enter when you are done.
+[1;34mfound line : order=LO[0m
+[1;34mThis answer is not valid for current question. Keep it for next question and use here default: 0[0m
+Do you want to edit a card (press enter to bypass editing)?
+/------------------------------------------------------------\
+|  [31m1[0m. param         : [32mparam_card.dat[0m                         |
+|  [31m2[0m. run           : [32mrun_card.dat[0m                           |
+|  [31m3[0m. pythia8       : [32mpythia8_card.dat[0m                       |
+|  [31m4[0m. madspin       : [32mmadspin_card.dat[0m                       |
+|  [31m5[0m. reweight      : [32mreweight_card.dat[0m                      |
+|  [31m6[0m. MadLoopParams : [32mMadLoopParams.dat[0m                      |
+\------------------------------------------------------------/
+ you can also
+   - enter the path to a valid card or banner.
+   - use the 'set' command to modify a parameter directly.
+     The set option works only for param_card and run_card.
+     Type 'help set' for more information on this command.
+   - call an external program (ASperGE/MadWidth/...).
+     Type 'help' for the list of available command
+ [[4m0[0m, done, 1, param, 2, run, 3, pythia8, 4, enter path, ... ]
+[1;34mfound line : order=LO[0m
+[1;34mThis answer is not valid for current question. Keep it for next question and use here default: 0[0m
+INFO: Update the dependent parameter of the param_card.dat 
+[1;34mWARNING: update the strong coupling value (alpha_s) to the value from the pdf selected: 0.119 [0m
+[1;34mWARNING: Unknow type of information in the card: dim64f2l,dim64f4l,dim64f [0m
+Generating 5000 events with run name run_01
+survey  run_01 
+INFO: compile directory 
+initMadLoop -r -f
+Error: no DISPLAY environment variable specified
+Initializing MadLoop loop-induced matrix elements (this can take some time)...
+MadLoop initialization finished.
+compile Source Directory
+Using random number seed offset = 21
+INFO: Running Survey 
+Creating Jobs
+Working on SubProcesses
+INFO:     P0_gg_hh  
+INFO:  Idle: 1,  Running: 7,  Completed: 0 [ current time: 18h12 ] 
+INFO:  Idle: 0,  Running: 7,  Completed: 1 [  1.5s  ] 
+INFO: P0_gg_hh/G1 is at 0.0154 +- 0.000592 pb. Now submitting iteration #2. 
+INFO:  Idle: 0,  Running: 7,  Completed: 10 [  4.5s  ] 
+INFO: P0_gg_hh/G1 is at 0.01582 +- 0.000152 pb. Now submitting iteration #3. 
+INFO:  Idle: 0,  Running: 6,  Completed: 20 [  9.3s  ] 
+INFO: Survey finished for P0_gg_hh/G1 at 0.01582 +- 4.88e-05 pb 
+INFO:  Idle: 0,  Running: 0,  Completed: 27 [  9.6s  ] 
+INFO: End survey 
+refine 5000
+Creating Jobs
+INFO: Refine results to 5000 
+INFO: Generating 5000.0 unweighted events. 
+sum of cpu time of last step: 0 second
+INFO: Effective Luminosity 363463.9696586599 pb^-1 
+INFO: need to improve 1 channels 
+- Current estimate of cross-section: 0.01582 +- 4.8761e-05
+INFO:  Idle: 0,  Running: 11,  Completed: 0 [ current time: 18h12 ] 
+INFO: P0_gg_hh/G1 is at 1472/5771 (26%) event. Resubmit 11 job at iteration 1. 
+INFO:  Idle: 0,  Running: 10,  Completed: 13 [  4.5s  ] 
+INFO: P0_gg_hh/G1 is at 2327/5763 (40%) event. Resubmit 28 job at iteration 2. 
+INFO:  Idle: 0,  Running: 2,  Completed: 50 [  7.5s  ] 
+INFO: P0_gg_hh/G1 is at 5149/5772 ('89%') event. Resubmit 7 job at iteration 3. 
+INFO: found enough event for P0_gg_hh/G1 
+INFO:  Idle: 0,  Running: 0,  Completed: 61 [  10.2s  ] 
+INFO: Combining runs 
+sum of cpu time of last step: 0 second
+INFO: finish refine 
+refine 5000 --treshold=0.9
+No need for second refine due to stability of cross-section
+INFO: Combining Events 
+ 
+ 
+ 
+  === Results Summary for run: run_01 tag: tag_1 ===
+
+     Cumulative sequential time for this run: 3m10s
+     Cross-section :   0.01588 +- 1.365e-05 pb
+     Nb of events :  5000
+ 
+store_events
+INFO: Storing parton level results 
+INFO: End Parton 
+reweight -from_cards
+INFO: Extracting the banner ... 
+INFO: process: p p > H H QED=2 QCD=2  
+INFO: options: NP=2  
+INFO: Running Reweighting 
+change output default
+change helicity False
+launch --rwgt_name=morphing_basis_vector_1
+INFO: detected model: SMEFTatNLO-LO. Loading... 
+INFO: generating the square matrix element for reweighting 
+INFO: generate p p > H H   QED=2 QCD=2 NP=2   --no_warning=duplicate;define pert_QCD = -5 -4 -3 -2 -1 1 2 3 4 5 21;add process p p > H H    pert_QCD QED=2 QCD=3 NP=2    --no_warning=duplicate; 
+INFO: RETRY with generate p p > H H   QED=2 QCD=2 NP=2  [virt=QCD] ; 
+INFO: Done 6.765 
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 4.568468 # orig: 0.0
+KEEP:set param_card dim6 5 -14.50239 # orig: 0.0
+KEEP:set param_card dim62f 19 -0.1290687 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h13 
+INFO: Event nb 10  0.1s  
+INFO: Event nb 20  0.16s  
+INFO: Event nb 30  0.23s  
+INFO: Event nb 40  0.29s  
+INFO: Event nb 50  0.35s  
+INFO: Event nb 60  0.41s  
+INFO: Event nb 70  0.48s  
+INFO: Event nb 80  0.54s  
+INFO: Event nb 90  0.6s  
+INFO: Event nb 100  0.66s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.8s  
+INFO: Event nb 700  4.4s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.6s  
+INFO: Event nb 1000  6.3s  
+INFO: Event nb 2000  12.5s  
+INFO: Event nb 3000  18.7s  
+INFO: Event nb 4000  24.9s  
+INFO: All event done  (nb_event: 5000)  31.1s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.201128 pb (indicative error: 0.113912 pb) 
+launch --rwgt_name=morphing_basis_vector_2
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 -4.840079 # orig: 0.0
+KEEP:set param_card dim6 5 -0.2123905 # orig: 0.0
+KEEP:set param_card dim62f 19 -3.773336 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h13 
+INFO: Event nb 10  0.063s  
+INFO: Event nb 20  0.13s  
+INFO: Event nb 30  0.19s  
+INFO: Event nb 40  0.25s  
+INFO: Event nb 50  0.31s  
+INFO: Event nb 60  0.38s  
+INFO: Event nb 70  0.44s  
+INFO: Event nb 80  0.5s  
+INFO: Event nb 90  0.56s  
+INFO: Event nb 100  0.63s  
+INFO: Event nb 200  1.2s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.7s  
+INFO: Event nb 700  4.3s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.7s  
+INFO: Event nb 1000  6.3s  
+INFO: Event nb 2000  12.5s  
+INFO: Event nb 3000  18.9s  
+INFO: Event nb 4000  25.2s  
+INFO: All event done  (nb_event: 5000)  31.4s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.0170433 pb (indicative error: 0.0013237 pb) 
+launch --rwgt_name=morphing_basis_vector_3
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 2.654277 # orig: 0.0
+KEEP:set param_card dim6 5 -1.429908 # orig: 0.0
+KEEP:set param_card dim62f 19 5.647737 # orig: 0.0
+KEEP: 
+INFO: Event nb 0  0.029s  
+INFO: Event nb 10  0.1s  
+INFO: Event nb 20  0.16s  
+INFO: Event nb 30  0.23s  
+INFO: Event nb 40  0.29s  
+INFO: Event nb 50  0.35s  
+INFO: Event nb 60  0.41s  
+INFO: Event nb 70  0.48s  
+INFO: Event nb 80  0.54s  
+INFO: Event nb 90  0.6s  
+INFO: Event nb 100  0.66s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.2s  
+INFO: Event nb 600  3.8s  
+INFO: Event nb 700  4.4s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.7s  
+INFO: Event nb 1000  6.3s  
+INFO: Event nb 2000  12.5s  
+INFO: Event nb 3000  18.8s  
+INFO: Event nb 4000  25s  
+INFO: All event done  (nb_event: 5000)  31.2s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.0231442 pb (indicative error: 0.00180869 pb) 
+launch --rwgt_name=morphing_basis_vector_4
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 -4.174598 # orig: 0.0
+KEEP:set param_card dim6 5 -1.93348 # orig: 0.0
+KEEP:set param_card dim62f 19 7.450314 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h14 
+INFO: Event nb 10  0.064s  
+INFO: Event nb 20  0.13s  
+INFO: Event nb 30  0.19s  
+INFO: Event nb 40  0.25s  
+INFO: Event nb 50  0.31s  
+INFO: Event nb 60  0.38s  
+INFO: Event nb 70  0.44s  
+INFO: Event nb 80  0.5s  
+INFO: Event nb 90  0.57s  
+INFO: Event nb 100  0.63s  
+INFO: Event nb 200  1.2s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.7s  
+INFO: Event nb 700  4.4s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.6s  
+INFO: Event nb 1000  6.2s  
+INFO: Event nb 2000  12.4s  
+INFO: Event nb 3000  18.9s  
+INFO: Event nb 4000  25.8s  
+INFO: All event done  (nb_event: 5000)  32.5s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.0815149 pb (indicative error: 0.00745431 pb) 
+launch --rwgt_name=morphing_basis_vector_5
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 0.3420566 # orig: 0.0
+KEEP:set param_card dim6 5 -2.811708 # orig: 0.0
+KEEP:set param_card dim62f 19 -4.408886 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h15 
+INFO: Event nb 10  0.068s  
+INFO: Event nb 20  0.13s  
+INFO: Event nb 30  0.2s  
+INFO: Event nb 40  0.27s  
+INFO: Event nb 50  0.34s  
+INFO: Event nb 60  0.41s  
+INFO: Event nb 70  0.47s  
+INFO: Event nb 80  0.54s  
+INFO: Event nb 90  0.6s  
+INFO: Event nb 100  0.67s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  2s  
+INFO: Event nb 400  2.6s  
+INFO: Event nb 500  3.3s  
+INFO: Event nb 600  3.9s  
+INFO: Event nb 700  4.6s  
+INFO: Event nb 800  5.3s  
+INFO: Event nb 900  5.9s  
+INFO: Event nb 1000  6.6s  
+INFO: Event nb 2000  13.2s  
+INFO: Event nb 3000  19.7s  
+INFO: Event nb 4000  25.9s  
+INFO: All event done  (nb_event: 5000)  32.1s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.0122688 pb (indicative error: 0.00551476 pb) 
+launch --rwgt_name=morphing_basis_vector_6
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 -1.486912 # orig: 0.0
+KEEP:set param_card dim6 5 -14.65643 # orig: 0.0
+KEEP:set param_card dim62f 19 3.719126 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h15 
+INFO: Event nb 10  0.064s  
+INFO: Event nb 20  0.13s  
+INFO: Event nb 30  0.19s  
+INFO: Event nb 40  0.25s  
+INFO: Event nb 50  0.31s  
+INFO: Event nb 60  0.38s  
+INFO: Event nb 70  0.44s  
+INFO: Event nb 80  0.51s  
+INFO: Event nb 90  0.57s  
+INFO: Event nb 100  0.64s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.7s  
+INFO: Event nb 700  4.3s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.6s  
+INFO: Event nb 1000  6.2s  
+INFO: Event nb 2000  12.4s  
+INFO: Event nb 3000  18.6s  
+INFO: Event nb 4000  24.8s  
+INFO: All event done  (nb_event: 5000)  31s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.0948165 pb (indicative error: 0.0669318 pb) 
+launch --rwgt_name=morphing_basis_vector_7
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 4.96465 # orig: 0.0
+KEEP:set param_card dim6 5 0.07340484 # orig: 0.0
+KEEP:set param_card dim62f 19 -3.185229 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h16 
+INFO: Event nb 10  0.071s  
+INFO: Event nb 20  0.14s  
+INFO: Event nb 30  0.2s  
+INFO: Event nb 40  0.26s  
+INFO: Event nb 50  0.32s  
+INFO: Event nb 60  0.39s  
+INFO: Event nb 70  0.45s  
+INFO: Event nb 80  0.51s  
+INFO: Event nb 90  0.58s  
+INFO: Event nb 100  0.64s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.7s  
+INFO: Event nb 700  4.4s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.6s  
+INFO: Event nb 1000  6.3s  
+INFO: Event nb 2000  12.5s  
+INFO: Event nb 3000  18.8s  
+INFO: Event nb 4000  25.1s  
+INFO: All event done  (nb_event: 5000)  31.3s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.0142229 pb (indicative error: 0.00346984 pb) 
+launch --rwgt_name=morphing_basis_vector_8
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 -2.237351 # orig: 0.0
+KEEP:set param_card dim6 5 6.46286 # orig: 0.0
+KEEP:set param_card dim62f 19 5.397525 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h16 
+INFO: Event nb 10  0.065s  
+INFO: Event nb 20  0.13s  
+INFO: Event nb 30  0.19s  
+INFO: Event nb 40  0.26s  
+INFO: Event nb 50  0.32s  
+INFO: Event nb 60  0.38s  
+INFO: Event nb 70  0.44s  
+INFO: Event nb 80  0.51s  
+INFO: Event nb 90  0.57s  
+INFO: Event nb 100  0.63s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.8s  
+INFO: Event nb 700  4.4s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.7s  
+INFO: Event nb 1000  6.3s  
+INFO: Event nb 2000  12.6s  
+INFO: Event nb 3000  18.9s  
+INFO: Event nb 4000  25.2s  
+INFO: All event done  (nb_event: 5000)  31.4s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.19534 pb (indicative error: 0.0385554 pb) 
+launch --rwgt_name=morphing_basis_vector_9
+INFO: starts to compute weight for events with the following modification to the param_card: 
+INFO: set param_card dim6 4 0.8859764 # orig: 0.0
+KEEP:set param_card dim6 5 -15.21787 # orig: 0.0
+KEEP:set param_card dim62f 19 7.243892 # orig: 0.0
+KEEP: 
+INFO: Event nb 0 current time: 18h17 
+INFO: Event nb 10  0.065s  
+INFO: Event nb 20  0.13s  
+INFO: Event nb 30  0.19s  
+INFO: Event nb 40  0.25s  
+INFO: Event nb 50  0.32s  
+INFO: Event nb 60  0.38s  
+INFO: Event nb 70  0.44s  
+INFO: Event nb 80  0.51s  
+INFO: Event nb 90  0.57s  
+INFO: Event nb 100  0.63s  
+INFO: Event nb 200  1.3s  
+INFO: Event nb 300  1.9s  
+INFO: Event nb 400  2.5s  
+INFO: Event nb 500  3.1s  
+INFO: Event nb 600  3.8s  
+INFO: Event nb 700  4.4s  
+INFO: Event nb 800  5s  
+INFO: Event nb 900  5.7s  
+INFO: Event nb 1000  6.3s  
+INFO: Event nb 2000  12.6s  
+INFO: Event nb 3000  18.8s  
+INFO: Event nb 4000  25s  
+INFO: All event done  (nb_event: 5000)  31.2s  
+INFO: Event /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01/unweighted_events.lhe have now the additional weight 
+INFO: new cross-section is : 0.105621 pb (indicative error: 0.0760559 pb) 
+INFO: Original cross-section: 0.015879 +- 1.3646e-05 pb (cross-section from sum of weights: 0.015878999999999276) 
+INFO: Computed cross-section: 
+INFO: morphing_basis_vector_1 : 0.20112820034691312 +- 0.11391166325574682 pb 
+INFO: morphing_basis_vector_2 : 0.017043309729604748 +- 0.001323703711982739 pb 
+INFO: morphing_basis_vector_3 : 0.023144193994544083 +- 0.0018086929731948732 pb 
+INFO: morphing_basis_vector_4 : 0.08151488811339452 +- 0.0074543131499189485 pb 
+INFO: morphing_basis_vector_5 : 0.012268828152037529 +- 0.005514762697388855 pb 
+INFO: morphing_basis_vector_6 : 0.09481647137203046 +- 0.06693180952752856 pb 
+INFO: morphing_basis_vector_7 : 0.014222911920509111 +- 0.003469840324509061 pb 
+INFO: morphing_basis_vector_8 : 0.19533973977946895 +- 0.03855539994156401 pb 
+INFO: morphing_basis_vector_9 : 0.10562114575656553 +- 0.07605586366626862 pb 
+INFO: quit rwgt 
+decay_events -from_cards
+INFO: Running MadSpin 
+INFO: This functionality allows for the decay of resonances 
+INFO: in a .lhe file, keeping track of the spin correlation effets. 
+INFO: BE AWARE OF THE CURRENT LIMITATIONS: 
+INFO:   (1) Only a succession of 2 body decay are currently allowed 
+************************************************************
+*                                                          *
+*           W E L C O M E  to  M A D S P I N               *
+*                                                          *
+************************************************************
+INFO: Extracting the banner ... 
+INFO: process: p p > H H QED=2 QCD=2  
+INFO: options: NP=2  
+INFO: detected model: SMEFTatNLO-LO. Loading... 
+set ninja to /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/HEPTools/lib
+set collier to /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/HEPTools/lib
+set lhapdf to /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/HEPTools/lhapdf6_py3/bin/lhapdf-config
+Set group_subprocesses to Auto
+Note that you need to regenerate all processes
+import model heft --bypass_check
+[1;34mWARNING: No param_card defined for the new model. We will use the default one but this might completely wrong. [0m
+INFO: detected model: heft. Loading... 
+INFO: load particles 
+INFO: load vertices 
+INFO: Restrict model heft with file ../../../../../vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1/models/heft/restrict_default.dat . 
+INFO: Run "set stdout_level DEBUG" before import for more information. 
+[1;34mPass the definition of 'j' and 'p' to 4 flavour scheme.[0m
+Kept definitions of multiparticles l+ / l- / vl / vl~ unchanged
+Removed obsolete multiparticles all
+Defined multiparticle all = g u c d s u~ c~ d~ s~ a ve vm vt e- m- ve~ vm~ vt~ e+ m+ t b t~ b~ z w+ h h1 w- tt- tt+
+set spinmode None          # Use one of the madspin special mode
+set max_weight_ps_point 400  # number of PS to estimate the maximum for each event
+decay h > b b~
+decay h > b b~
+launch
+INFO: Will use seed 650021942 
+INFO: generate 5000 decay event for particle h 
+INFO: Will use seed 95197540 
+decaying event number 100 [0.04804205894470215 s]
+decaying event number 200 [0.09463691711425781 s]
+decaying event number 300 [0.14130282402038574 s]
+decaying event number 400 [0.1876218318939209 s]
+decaying event number 500 [0.23409795761108398 s]
+decaying event number 600 [0.28084301948547363 s]
+decaying event number 700 [0.3275184631347656 s]
+decaying event number 800 [0.3738698959350586 s]
+decaying event number 900 [0.4201185703277588 s]
+decaying event number 1000 [0.46666431427001953 s]
+decaying event number 2000 [0.9362020492553711 s]
+decaying event number 3000 [1.4017410278320312 s]
+decaying event number 4000 [1.8701040744781494 s]
+INFO: The decayed event file has been moved to the following location:  
+INFO: /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/Events/run_01_decayed_1/unweighted_events.lhe.gz 
+INFO: MadSpin Done 
+[1;31mCommand "generate_events run_01" interrupted with error:
+InvalidCmd : The MG5aMC_PY8_interface tool cannot be found, so that MadEvent cannot steer Pythia8 shower.
+	Please install this tool with the following MG5_aMC command:
+	  MG5_aMC> install mg5amc_py8_interface_path[0m
+INFO: storing files of previous run 
+INFO: Done 
+INFO:  
+[1;34mcommand not executed:         shower=Pythia8[0m
+[1;34mcommand not executed:         detector=OFF[0m
+[1;34mcommand not executed:         analysis=OFF[0m
+[1;34mcommand not executed:         madspin=ON[0m
+[1;34mcommand not executed:         reweight=ON[0m
+[1;34mcommand not executed:         done[0m
+[1;34mcommand not executed:         [0m
+quit
+INFO:  
+more information in /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes/signal_sm/index.html
+order=LO
+[1;34mCommand "order=LO" not recognized, please try again[0m
+quit
+ mdl_vev0 =    246.22056907348588     
+ mdl_vev0__exp__2 =    60624.568634871226     
+ mdl_dlam =   0.10742387414135225     
+ mdl_ee0 =   0.31345063981313520     
+ mdl_cw =   0.87538656571726847     
+ mdl_muH =    83.640838281650900     
+ mdl_sw =   0.48342358295983689     
+ mdl_g1 =   0.35807111062562641     
+ mdl_gw =   0.64839749416853931     
+ mdl_lam =   0.11502351505821147     
+ mdl_vev =    246.22056907348588     
+ mdl_ee =   0.31345063981313520     
+ mdl_ee__exp__2 =    9.8251303599263817E-002
+ mdl_aEW =    7.8185903165226816E-003
+ aEWM1 =    127.90029398096792     
+ mdl_ee0__exp__2 =    9.8251303599263817E-002
+ mdl_ee0__exp__3 =    3.0796933975663836E-002
+ mdl_vev0__exp__3 =    14927015.789112596     
+  Internal Params evaluated point by point
+  ----------------------------------------
+  
+ mdl_sqrt__aS =   0.34496376621320685     
+ mdl_G__exp__2 =    1.4953981031087418     
+ mdl_G__exp__3 =    1.8286695702272273     
+ mdl_G__exp__4 =    2.2362154867812229     
+ mdl_MU_R__exp__2 =    8315.2513440000002     
+  Couplings of SMEFTatNLO-LO
+  ---------------------------------
+  
+        GC_11 =   0.00000E+00   0.12229E+01
+ R2GC_1297_467 =  0.00000E+00   0.19549E-01
+ R2GC_1298_468 =  0.00000E+00   0.88935E+00
+ R2GC_618_1801 = -0.00000E+00  -0.92422E-02
+ R2GC_631_1814 = -0.00000E+00  -0.22756E+01
+      GC_1822 =   0.00000E+00   0.37836E-02
+      GC_1842 =   0.00000E+00   0.27301E+00
+       GC_322 =  -0.00000E+00  -0.19038E+03
+       GC_420 =   0.00000E+00  -0.13629E+04
+       GC_422 =   0.00000E+00   0.87258E-03
+       GC_431 =   0.00000E+00  -0.10226E+02
+       GC_546 =  -0.00000E+00  -0.69856E+00
