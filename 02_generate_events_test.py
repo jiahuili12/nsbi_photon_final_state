@@ -10,6 +10,8 @@ from datetime import datetime
 
 from madminer.core import MadMiner
 import argparse
+import glob
+import subprocess
 
 #os.environ["TMPDIR"] = "/vols/cms/us322/tmp"
 
@@ -40,8 +42,33 @@ args = parser.parse_args()
 
 mg_dir = workflow["madgraph"]["dir"]
 
+def fix_and_rerun_pythia(py8_parallel_dir):
+    split_dirs = sorted(glob.glob(os.path.join(py8_parallel_dir, "split_*")))
+    for sd in split_dirs:
+        lhe_gz = os.path.join(sd, "events.lhe.gz")
+        lhe = os.path.join(sd, "events.lhe")
+        card = os.path.join(sd, "PY8Card.dat")
+        runner = os.path.join(sd, "run_PY8.sh")
+        hepmc = os.path.join(sd, "events.hepmc")
+        log = os.path.join(sd, "PY8_log.txt")
+
+        if not os.path.exists(lhe_gz):
+            continue
+
+        if (not os.path.exists(lhe)) or (os.path.getsize(lhe) == 0):
+            subprocess.run(["bash","-lc", f"gunzip -c {lhe_gz} > {lhe}"], check=True)
+
+        subprocess.run(["bash","-lc", f"sed -i 's|^Beams:LHEF=.*$|Beams:LHEF=events.lhe|' {card}"], check=True)
+        subprocess.run(["bash","-lc", f"rm -f {hepmc} {log}"], check=False)
+        subprocess.run(["bash","-lc", f"cd {sd} && bash {runner}"], check=True)
+
+        if (not os.path.exists(hepmc)) or (os.path.getsize(hepmc) == 0):
+            raise RuntimeError(f"Pythia rerun failed: {hepmc} is empty in {sd}")
+
+
 class CPUMonitor:
     """Monitor CPU usage during event generation"""
+
     
     def __init__(self, log_file=None):
         self.log_file = log_file
@@ -212,6 +239,14 @@ if args.sm:
         #systematics=["signal_norm"]
     )
 
+    # 自动修复：把所有 run_*_decayed_*/PY8_parallelization 都处理一遍
+    events_root = os.path.join(workflow["madgraph"]["output_dir"], "signal_sm", "Events")
+    py8_dirs = sorted(glob.glob(os.path.join(events_root, "run_*", "PY8_parallelization"))) + \
+              sorted(glob.glob(os.path.join(events_root, "run_*_decayed_*", "PY8_parallelization")))
+    py8_dirs = sorted(set(py8_dirs))
+    for d in py8_dirs:
+        fix_and_rerun_pythia(d)
+
 if args.supp:
     
     miner.run_multiple(
@@ -229,6 +264,14 @@ if args.supp:
         #systematics=["signal_norm"]
     )
 
+    events_root = os.path.join(workflow["madgraph"]["output_dir"], "signal_supp", f"morphing_basis_vector_{args.supp_id}", "Events")
+    py8_dirs = sorted(glob.glob(os.path.join(events_root, "run_*", "PY8_parallelization"))) + \
+              sorted(glob.glob(os.path.join(events_root, "run_*_decayed_*", "PY8_parallelization")))
+    py8_dirs = sorted(set(py8_dirs))
+    for d in py8_dirs:
+        fix_and_rerun_pythia(d)
+
+
 
 if args.b:
     for i in range(1):
@@ -243,6 +286,13 @@ if args.b:
             run_card_files=run_cards_background,
             log_directory=f"{working_dir}/logs_2/background",
         )
+
+        events_root = os.path.join(f"{workflow['madgraph']['output_dir']}_2", "background", "Events")
+        py8_dirs = sorted(glob.glob(os.path.join(events_root, "run_*", "PY8_parallelization"))) + \
+                  sorted(glob.glob(os.path.join(events_root, "run_*_decayed_*", "PY8_parallelization")))
+        py8_dirs = sorted(set(py8_dirs))
+        for d in py8_dirs:
+            fix_and_rerun_pythia(d)
 
 # Stop CPU monitoring and print summary
 cpu_monitor.stop_monitoring()
