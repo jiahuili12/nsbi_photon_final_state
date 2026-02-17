@@ -167,7 +167,7 @@ else:
     n_runs = 1
 
 if workflow["madgraph"]["test_run"]:
-    n_runs = 1
+    n_runs = 3
 
 miner = MadMiner()
 miner.load(workflow["morphing_setup"])

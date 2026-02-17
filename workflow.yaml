@@ -5,7 +5,7 @@ morphing_setup: /vols/cms/jl3222/nsbi_photon_final_state/data/setup.h5
 # Step 2: MadGraph generation
 madgraph:
   dir: /vols/cms/jl3222/software/mg5amcnlo_3p5p1/MG5_aMC_v3_5_1
-  test_run: true             # ←←← 关键行，告诉脚本只跑一次（测试用）
+  test_run: false             # ←←← 关键行，告诉脚本只跑一次（测试用）
   n_runs: 2                 # 先小跑；稳定后再加大
   output_dir: /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes
   energy: 14                # HL-LHC=14；未来可切到100
@@ -14,7 +14,6 @@ madgraph:
 delphes:
   # 与 Step2 的输出保持一致（非常关键）
   input_dir_prefix: /vols/cms/jl3222/nsbi_photon_final_state/02_mg_processes
-  # Delphes 分析后的 .h5 输出前缀（不要加扩展名）
   output_file: /vols/cms/jl3222/nsbi_photon_final_state/04_post_delphes/delphes
   # 合并/长期保存处（03b_compile.py 使用）
   long_term_storage_dir: /vols/cms/jl3222/nsbi_photon_final_state/04_post_delphes

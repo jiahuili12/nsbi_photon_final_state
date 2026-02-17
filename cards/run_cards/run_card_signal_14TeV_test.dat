@@ -23,7 +23,7 @@
 # Number of events and rnd seed                                      *
 # Warning: Do not generate more than 1M events in a single run       *
 #*********************************************************************
-  5000 = nevents ! Number of unweighted events requested 
+  100 = nevents ! Number of unweighted events requested 
   0   = iseed   ! rnd seed (XXX=will be replaced with random number)
 #*********************************************************************
 # Collider type and energy                                           *
