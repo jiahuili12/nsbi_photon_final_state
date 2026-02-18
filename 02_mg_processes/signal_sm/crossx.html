@@ -1,0 +1,645 @@
+
+<HTML> 
+<HEAD> 
+     
+    <META HTTP-EQUIV="EXPIRES" CONTENT="20" > 
+    <TITLE>Online Event Generation</TITLE>
+    <link rel=stylesheet href="./HTML/mgstyle.css" type="text/css">
+</HEAD>
+<BODY>
+<script type="text/javascript">
+function UrlExists(url) {
+  var http = new XMLHttpRequest();
+  http.open('HEAD', url, false);
+  try{
+     http.send()
+     }
+  catch(err){
+   return 1==2;
+  }
+  return http.status!=404;
+}
+</script>    
+    <H2 align=center> Results in the SMEFTatNLO-LO for p p > H H   QED=2 QCD=2 NP=2 [QCD]
+ </H2> 
+    <HR>
+    
+    <br>
+    <br>
+    <H2 align="center"> Available Results </H2>
+        <TABLE BORDER=2 align="center">  
+            <TR align="center">
+                <TH>Run</TH> 
+                <TH>Collider</TH> 
+                <TH> Banner </TH>
+                <TH> Cross section (pb) </TH> 
+                <TH> Events  </TH>
+                <TH> Data </TH>  
+                <TH>Output</TH>
+                <TH>Action</TH> 
+            </TR>      
+            
+        <tr>
+        <td rowspan=1>run_01</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_01/run_01_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_01/results.html"> 0.02873 <font face=symbol>&#177;</font> 0.002 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_01_tag_1_parton_LHE' href='./Events/run_01/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_01 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_01 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_01_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_01_decayed_1/run_01_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01439 <font face=symbol>&#177;</font> 4.4e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_01_decayed_1_tag_1_parton_LHE' href='./Events/run_01_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_01_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_01_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_01_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_01_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_01_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_01_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_01_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_02</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_02/run_02_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_02/results.html"> 0.02779 <font face=symbol>&#177;</font> 0.0017 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_02_tag_1_parton_LHE' href='./Events/run_02/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_02 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_02 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_02_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_02_decayed_1/run_02_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01449 <font face=symbol>&#177;</font> 4e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_02_decayed_1_tag_1_parton_LHE' href='./Events/run_02_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_02_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_02_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_02_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_02_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_02_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_02_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_02_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_03</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_03/run_03_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_03/results.html"> 0.0292 <font face=symbol>&#177;</font> 0.0026 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_03_tag_1_parton_LHE' href='./Events/run_03/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_03 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_03 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_03_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_03_decayed_1/run_03_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01437 <font face=symbol>&#177;</font> 3.3e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_03_decayed_1_tag_1_parton_LHE' href='./Events/run_03_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_03_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_03_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_03_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_03_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_03_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_03_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_03_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_04</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_04/run_04_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_04/results.html"> 0.02861 <font face=symbol>&#177;</font> 0.002 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_04_tag_1_parton_LHE' href='./Events/run_04/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_04 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_04 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_04_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_04_decayed_1/run_04_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.0145 <font face=symbol>&#177;</font> 0.0001 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_04_decayed_1_tag_1_parton_LHE' href='./Events/run_04_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_04_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_04_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_04_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_04_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_04_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_04_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_04_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_05</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_05/run_05_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_05/results.html"> 0.02828 <font face=symbol>&#177;</font> 0.0019 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_05_tag_1_parton_LHE' href='./Events/run_05/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_05 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_05 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_05_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_05_decayed_1/run_05_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01438 <font face=symbol>&#177;</font> 0.00017 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_05_decayed_1_tag_1_parton_LHE' href='./Events/run_05_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_05_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_05_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_05_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_05_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_05_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_05_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_05_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_06</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_06/run_06_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_06/results.html"> 0.02899 <font face=symbol>&#177;</font> 0.002 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_06_tag_1_parton_LHE' href='./Events/run_06/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_06 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_06 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_06_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_06_decayed_1/run_06_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01452 <font face=symbol>&#177;</font> 3.9e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_06_decayed_1_tag_1_parton_LHE' href='./Events/run_06_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_06_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_06_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_06_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_06_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_06_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_06_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_06_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_07</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_07/run_07_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_07/results.html"> 0.02912 <font face=symbol>&#177;</font> 0.003 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_07_tag_1_parton_LHE' href='./Events/run_07/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_07 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_07 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_07_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_07_decayed_1/run_07_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01438 <font face=symbol>&#177;</font> 9.8e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_07_decayed_1_tag_1_parton_LHE' href='./Events/run_07_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_07_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_07_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_07_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_07_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_07_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_07_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_07_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_08</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_08/run_08_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_08/results.html"> 0.02863 <font face=symbol>&#177;</font> 0.0017 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_08_tag_1_parton_LHE' href='./Events/run_08/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_08 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_08 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_08_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_08_decayed_1/run_08_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01453 <font face=symbol>&#177;</font> 4.7e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_08_decayed_1_tag_1_parton_LHE' href='./Events/run_08_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_08_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_08_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_08_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_08_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_08_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_08_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_08_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_09</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_09/run_09_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_09/results.html"> 0.02795 <font face=symbol>&#177;</font> 0.0016 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_09_tag_1_parton_LHE' href='./Events/run_09/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_09 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_09 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_09_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_09_decayed_1/run_09_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.0145 <font face=symbol>&#177;</font> 2.9e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_09_decayed_1_tag_1_parton_LHE' href='./Events/run_09_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_09_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_09_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_09_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_09_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_09_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_09_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_09_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_10</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_10/run_10_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_10/results.html"> 0.0289 <font face=symbol>&#177;</font> 0.0021 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_10_tag_1_parton_LHE' href='./Events/run_10/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_10 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_10 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_10_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_10_decayed_1/run_10_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01449 <font face=symbol>&#177;</font> 6.1e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_10_decayed_1_tag_1_parton_LHE' href='./Events/run_10_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_10_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_10_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_10_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_10_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_10_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_10_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_10_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_11</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_11/run_11_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_11/results.html"> 0.02796 <font face=symbol>&#177;</font> 0.0018 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_11_tag_1_parton_LHE' href='./Events/run_11/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_11 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_11 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_11_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_11_decayed_1/run_11_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01433 <font face=symbol>&#177;</font> 5.7e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_11_decayed_1_tag_1_parton_LHE' href='./Events/run_11_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_11_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_11_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_11_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_11_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_11_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_11_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_11_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_12</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_12/run_12_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_12/results.html"> 0.02924 <font face=symbol>&#177;</font> 0.0023 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_12_tag_1_parton_LHE' href='./Events/run_12/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_12 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_12 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_12_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_12_decayed_1/run_12_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01445 <font face=symbol>&#177;</font> 0.00013 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_12_decayed_1_tag_1_parton_LHE' href='./Events/run_12_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_12_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_12_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_12_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_12_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_12_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_12_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_12_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_13</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_13/run_13_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_13/results.html"> 0.02874 <font face=symbol>&#177;</font> 0.0028 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_13_tag_1_parton_LHE' href='./Events/run_13/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_13 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_13 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_13_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_13_decayed_1/run_13_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01439 <font face=symbol>&#177;</font> 0.0001 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_13_decayed_1_tag_1_parton_LHE' href='./Events/run_13_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_13_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_13_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_13_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_13_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_13_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_13_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_13_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_14</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_14/run_14_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_14/results.html"> 0.03027 <font face=symbol>&#177;</font> 0.003 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_14_tag_1_parton_LHE' href='./Events/run_14/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_14 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_14 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_14_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_14_decayed_1/run_14_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01446 <font face=symbol>&#177;</font> 6.7e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_14_decayed_1_tag_1_parton_LHE' href='./Events/run_14_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_14_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_14_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_14_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_14_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_14_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_14_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_14_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_15</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_15/run_15_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_15/results.html"> 0.02808 <font face=symbol>&#177;</font> 0.0019 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_15_tag_1_parton_LHE' href='./Events/run_15/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_15 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_15 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_15_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_15_decayed_1/run_15_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01439 <font face=symbol>&#177;</font> 9.6e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_15_decayed_1_tag_1_parton_LHE' href='./Events/run_15_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_15_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_15_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_15_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_15_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_15_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_15_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_15_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_16</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_16/run_16_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_16/results.html"> 0.02743 <font face=symbol>&#177;</font> 0.002 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_16_tag_1_parton_LHE' href='./Events/run_16/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_16 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_16 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_16_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_16_decayed_1/run_16_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01439 <font face=symbol>&#177;</font> 0.00011 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_16_decayed_1_tag_1_parton_LHE' href='./Events/run_16_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_16_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_16_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_16_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_16_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_16_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_16_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_16_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_17</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_17/run_17_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_17/results.html"> 0.02765 <font face=symbol>&#177;</font> 0.002 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_17_tag_1_parton_LHE' href='./Events/run_17/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_17 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_17 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_17_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_17_decayed_1/run_17_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01434 <font face=symbol>&#177;</font> 0.00013 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_17_decayed_1_tag_1_parton_LHE' href='./Events/run_17_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_17_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_17_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_17_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_17_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_17_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_17_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_17_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_18</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_18/run_18_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_18/results.html"> 0.02911 <font face=symbol>&#177;</font> 0.0023 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_18_tag_1_parton_LHE' href='./Events/run_18/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_18 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_18 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_18_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_18_decayed_1/run_18_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01455 <font face=symbol>&#177;</font> 5.1e-05 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_18_decayed_1_tag_1_parton_LHE' href='./Events/run_18_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_18_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_18_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_18_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_18_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_18_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_18_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_18_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_19</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_19/run_19_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_19/results.html"> 0.02865 <font face=symbol>&#177;</font> 0.002 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_19_tag_1_parton_LHE' href='./Events/run_19/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_19 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_19 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_19_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_19_decayed_1/run_19_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.01447 <font face=symbol>&#177;</font> 0.0001 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_19_decayed_1_tag_1_parton_LHE' href='./Events/run_19_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_19_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_19_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_19_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_19_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_19_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_19_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_19_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=1>run_20</td> 
+        <td rowspan=1><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=1> <a href="./Events/run_20/run_20_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=1><center><a href="./HTML/run_20/results.html"> 0.03025 <font face=symbol>&#177;</font> 0.0029 </a>  </center></td>
+        <td rowspan=1><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_20_tag_1_parton_LHE' href='./Events/run_20/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_20 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_20 ')"></td>
+        </tr>
+        </tr>
+        
+        <tr>
+        <td rowspan=2>run_20_decayed_1</td> 
+        <td rowspan=2><center>  p  p <br> 7000.0 x 7000.0  GeV </center></td>
+        
+        <td rowspan=2> <a href="./Events/run_20_decayed_1/run_20_decayed_1_tag_1_banner.txt">tag_1</a></td>
+        
+        <td rowspan=2><center><a> 0.0145 <font face=symbol>&#177;</font> 0.00018 </a>  </center></td>
+        <td rowspan=2><center> 100<center></td><td> parton madevent </td>
+        <td>  <a  id='run_20_decayed_1_tag_1_parton_LHE' href='./Events/run_20_decayed_1/unweighted_events.lhe.gz'>LHE</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_20_decayed_1 parton --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: pythia run_20_decayed_1 ')"></td>
+        </tr>
+        <td> pythia8 </td>
+        <td>  <a href="./Events/run_20_decayed_1/tag_1_pythia8.log">LOG</a> <a  id='run_20_decayed_1_tag_1_pythia8_HEPMC' href='./Events/run_20_decayed_1/tag_1_pythia8_events.hepmc.gz'>HEPMC</a></td>
+        <td> <INPUT TYPE=SUBMIT VALUE='remove run' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: remove run_20_decayed_1 pythia --tag=tag_1')"><INPUT TYPE=SUBMIT VALUE='launch detector simulation' onClick="alert('Launch ./bin/madevent in a shell, and run the following command: delphes run_20_decayed_1')"></td> 
+        </tr>
+        </tr>
+        
+        </TABLE>
+    <H3 align=center><A HREF="./index.html"> Main Page </A></H3>
+</BODY> 
+</HTML> 
