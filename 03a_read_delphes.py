@@ -118,6 +118,20 @@ def get_b_eta(l,a,j,met,index):
         return bjets[index].eta
     return np.nan
 
+
+def get_b_phi(l,a,j,met,index):
+    found, bjets = get_four_bjets(j)
+    if found:
+        return bjets[index].phi
+    return np.nan
+
+def get_b_m(l,a,j,met,index):
+    found, bjets = get_four_bjets(j)
+    if found:
+        return bjets[index].m
+    return np.nan
+
+
 def get_bb_deltaR(l,a,j,met,i1,i2):
     found, bjets = get_four_bjets(j)
     if found:
@@ -156,21 +170,23 @@ def add_observables(delphes):
     for i in range(4):
         delphes.add_observable_from_function(f"b{i}_pt", lambda l,a,j,met,ii=i: get_b_pt(l,a,j,met,ii), required=True)
         delphes.add_observable_from_function(f"b{i}_eta", lambda l,a,j,met,ii=i: get_b_eta(l,a,j,met,ii), required=True)
+        delphes.add_observable_from_function(f"b{i}_phi", lambda l,a,j,met,ii=i: get_b_phi(l,a,j,met,ii), required=True)
+        delphes.add_observable_from_function(f"b{i}_m",   lambda l,a,j,met,ii=i: get_b_m(l,a,j,met,ii),   required=False)
 
     # ΔR between Higgs candidate jets
-    delphes.add_observable_from_function("bb1_deltaR", lambda l,a,j,met: get_bb_deltaR(l,a,j,met,0,1), required=True)
-    delphes.add_observable_from_function("bb2_deltaR", lambda l,a,j,met: get_bb_deltaR(l,a,j,met,2,3), required=True)
+    delphes.add_observable_from_function("bb1_deltaR", lambda l,a,j,met: get_bb_deltaR(l,a,j,met,0,1), required=False)
+    delphes.add_observable_from_function("bb2_deltaR", lambda l,a,j,met: get_bb_deltaR(l,a,j,met,2,3), required=False)
 
     # Invariant masses for Higgs candidates
-    delphes.add_observable_from_function("m_bb1", lambda l,a,j,met: get_mbb(l,a,j,met,0,1), required=True)
-    delphes.add_observable_from_function("m_bb2", lambda l,a,j,met: get_mbb(l,a,j,met,2,3), required=True)
+    delphes.add_observable_from_function("m_bb1", lambda l,a,j,met: get_mbb(l,a,j,met,0,1), required=False)
+    delphes.add_observable_from_function("m_bb2", lambda l,a,j,met: get_mbb(l,a,j,met,2,3), required=False)
 
     # pT of Higgs candidates
-    delphes.add_observable_from_function("pt_bb1", lambda l,a,j,met: get_ptbb(l,a,j,met,0,1), required=True)
-    delphes.add_observable_from_function("pt_bb2", lambda l,a,j,met: get_ptbb(l,a,j,met,2,3), required=True)
+    delphes.add_observable_from_function("pt_bb1", lambda l,a,j,met: get_ptbb(l,a,j,met,0,1), required=False)
+    delphes.add_observable_from_function("pt_bb2", lambda l,a,j,met: get_ptbb(l,a,j,met,2,3), required=False)
 
     # Total invariant mass of all 4 b-jets
-    delphes.add_observable_from_function("m_tot_4b", get_mtot_4b, required=True)
+    # delphes.add_observable_from_function("m_tot_4b", get_mtot_4b, required=True)
 
 def add_cuts_and_efficiencies(delphes, region=None):
 
@@ -194,8 +210,8 @@ def add_cuts_and_efficiencies(delphes, region=None):
     delphes.add_cut('bb2_deltaR>0.4')
     
     # Higgs mass windows
-    delphes.add_cut('abs(m_bb1-125)<25')
-    delphes.add_cut('abs(m_bb2-125)<25')
+    # delphes.add_cut('abs(m_bb1-125)<25')
+    # delphes.add_cut('abs(m_bb2-125)<25')
 
 add_observables(delphes)
 add_cuts_and_efficiencies(delphes)
