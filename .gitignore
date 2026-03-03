@@ -41,3 +41,21 @@ __pycache__/
 # Other temporary / large data
 *.dat
 
+# Generated data / heavy artifacts
+02_mg_processes/
+04_post_delphes/
+delpheslogs/
+logs/
+
+# Common HEP outputs
+*.root
+*.lhe
+*.lhe.gz
+*.hepmc
+*.hepmc.gz
+*.h5
+*.a
+*.o
+*.so
+*.tar.gz
+*.pkl
