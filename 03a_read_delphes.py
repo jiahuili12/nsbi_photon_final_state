@@ -181,12 +181,18 @@ def get_dhh_asym_best(l, a, j, met):
     return dhh_best
 
 
-def _asym_dhh(m_h1, m_h2, m1=125.0, m2=120.0):
+#def _asym_dhh(m_h1, m_h2, m1=125.0, m2=120.0):
     # m_h1: leading-pT Higgs candidate mass
     # m_h2: subleading-pT Higgs candidate mass
     # returns the distance to the (m1, m2) line/point as in your equation
-    alpha = m2 / m1
-    return abs(m_h1 - m1 - alpha * m_h2) / math.sqrt(1.0 + alpha * alpha)
+    #alpha = m2 / m1
+    #return abs(m_h1 - m1 - alpha * m_h2) / math.sqrt(1.0 + alpha * alpha)
+
+def _dhh_to_point_symmetric(m_h1, m_h2, m1=125.0, m2=120.0):
+    # Distance to the point (m1, m2), but symmetric under swapping the two Higgs candidates
+    d12 = math.sqrt((m_h1 - m1)**2 + (m_h2 - m2)**2)
+    d21 = math.sqrt((m_h1 - m2)**2 + (m_h2 - m1)**2)
+    return min(d12, d21)
 
 
 def best_pairing_indices(j, dhh_tie_threshold=30.0):
@@ -217,7 +223,7 @@ def best_pairing_indices(j, dhh_tie_threshold=30.0):
         mH1, mH2 = H1.m, H2.m
         pTH1, pTH2 = H1.pt, H2.pt
 
-        dhh = _asym_dhh(mH1, mH2, m1=125.0, m2=120.0)
+        dhh = _dhh_to_point_symmetric(mH1, mH2, m1=125.0, m2=120.0)
 
         results.append((dhh, pTH1, pTH2, idx, mH1, mH2))
 
@@ -294,10 +300,10 @@ def add_cuts_and_efficiencies(delphes, region=None):
     delphes.add_cut('num_bjets>=4')
 
     # pT cuts (from trigger plateau)
-    delphes.add_cut('b0_pt>35')
-    delphes.add_cut('b1_pt>35')
-    delphes.add_cut('b2_pt>35')
-    delphes.add_cut('b3_pt>30')
+    delphes.add_cut('b0_pt>25')
+    delphes.add_cut('b1_pt>25')
+    delphes.add_cut('b2_pt>25')
+    delphes.add_cut('b3_pt>20')
 
     # η cuts
     delphes.add_cut('abs(b0_eta)<2.5')
@@ -310,8 +316,8 @@ def add_cuts_and_efficiencies(delphes, region=None):
     delphes.add_cut('bb2_deltaR>0.4')
     
     # Higgs mass windows
-    # delphes.add_cut('abs(m_bb1-125)<25')
-    # delphes.add_cut('abs(m_bb2-125)<25')
+    delphes.add_cut('abs(m_bb1-125)<25')
+    delphes.add_cut('abs(m_bb2-125)<25')
 
 add_observables(delphes)
 add_cuts_and_efficiencies(delphes)
