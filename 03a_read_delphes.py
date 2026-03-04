@@ -300,24 +300,24 @@ def add_cuts_and_efficiencies(delphes, region=None):
     delphes.add_cut('num_bjets>=4')
 
     # pT cuts (from trigger plateau)
-    delphes.add_cut('b0_pt>25')
-    delphes.add_cut('b1_pt>25')
-    delphes.add_cut('b2_pt>25')
-    delphes.add_cut('b3_pt>20')
+    #delphes.add_cut('b0_pt>25')
+    #delphes.add_cut('b1_pt>25')
+    #delphes.add_cut('b2_pt>25')
+    #delphes.add_cut('b3_pt>20')
 
     # η cuts
-    delphes.add_cut('abs(b0_eta)<2.5')
-    delphes.add_cut('abs(b1_eta)<2.5')
-    delphes.add_cut('abs(b2_eta)<2.5')
-    delphes.add_cut('abs(b3_eta)<2.5')
+    #delphes.add_cut('abs(b0_eta)<2.5')
+    #delphes.add_cut('abs(b1_eta)<2.5')
+    #delphes.add_cut('abs(b2_eta)<2.5')
+    #delphes.add_cut('abs(b3_eta)<2.5')
 
     # ΔR separation between b’s in each Higgs candidate
-    delphes.add_cut('bb1_deltaR>0.4')
-    delphes.add_cut('bb2_deltaR>0.4')
+    #delphes.add_cut('bb1_deltaR>0.4')
+    #delphes.add_cut('bb2_deltaR>0.4')
     
     # Higgs mass windows
-    delphes.add_cut('abs(m_bb1-125)<25')
-    delphes.add_cut('abs(m_bb2-125)<25')
+    #delphes.add_cut('abs(m_bb1-125)<25')
+    #delphes.add_cut('abs(m_bb2-125)<25')
 
 add_observables(delphes)
 add_cuts_and_efficiencies(delphes)
