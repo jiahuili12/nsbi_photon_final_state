@@ -151,7 +151,7 @@ if energy == 14:  # HL-LHC
     elif args.supp:
         n_runs = 10  # BSM runs
     elif args.b:
-        n_runs = 160  # Background runs
+        n_runs = 50  # Background runs 160
     else:
         n_runs = 1  # Default fallback
 elif energy == 100:  # Future-Collider
