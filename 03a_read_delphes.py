@@ -190,7 +190,7 @@ def get_dhh_asym_best(l, a, j, met):
     #alpha = m2 / m1
     #return abs(m_h1 - m1 - alpha * m_h2) / math.sqrt(1.0 + alpha * alpha)
 
-def _dhh_to_point_symmetric(m_h1, m_h2, m1=125.0, m2=120.0):
+def _dhh_to_point_symmetric(m_h1, m_h2, m1=120, m2=110.0):
     # Distance to the point (m1, m2), but symmetric under swapping the two Higgs candidates
     d12 = math.sqrt((m_h1 - m1)**2 + (m_h2 - m2)**2)
     d21 = math.sqrt((m_h1 - m2)**2 + (m_h2 - m1)**2)
@@ -225,7 +225,7 @@ def best_pairing_indices(j, dhh_tie_threshold=30.0): #pairing 这里注意一下
         mH1, mH2 = H1.m, H2.m
         pTH1, pTH2 = H1.pt, H2.pt
 
-        dhh = _dhh_to_point_symmetric(mH1, mH2, m1=125.0, m2=120.0)
+        dhh = _dhh_to_point_symmetric(mH1, mH2, m1=120.0, m2=110.0)
 
         results.append((dhh, pTH1, pTH2, idx, mH1, mH2))
 
