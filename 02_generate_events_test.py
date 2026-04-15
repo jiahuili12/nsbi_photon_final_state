@@ -147,11 +147,11 @@ energy = int(workflow["madgraph"]["energy"])
 # Attempting to replicate results from the paper.
 if energy == 14:  # HL-LHC
     if args.sm:
-        n_runs = 20  # Signal runs
+        n_runs = 10  # Signal runs
     elif args.supp:
         n_runs = 10  # BSM runs
     elif args.b:
-        n_runs = 50  # Background runs 160
+        n_runs = 10  # Background runs 160
     else:
         n_runs = 1  # Default fallback
 elif energy == 100:  # Future-Collider
