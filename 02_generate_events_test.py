@@ -147,7 +147,7 @@ energy = int(workflow["madgraph"]["energy"])
 # Attempting to replicate results from the paper.
 if energy == 14:  # HL-LHC
     if args.sm:
-        n_runs = 10  # Signal runs
+        n_runs = 20  # Signal runs
     elif args.supp:
         n_runs = 10  # BSM runs
     elif args.b:
