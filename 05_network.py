@@ -32,7 +32,7 @@ parser.add_argument("--max_train", type=int, default=None)
 
 parser.add_argument(
     "--feature_mode",
-    choices=["m4b", "pt_h", "dr_bb", "hh_angles"],
+    choices=["m4b", "pt_h", "deltaeta_hh", "deltaphi_hh", "m4b_pt_h", "top3_custom"],
     required=True,
 )
 
@@ -64,8 +64,11 @@ observable_name_map = {
 feature_sets = {
     "m4b": [24],
     "pt_h": [25, 26],
-    "dr_bb": [27],  #deltaeta_hh
-    "hh_angles": [30], #deltaphihh
+    "dr_bb": [17, 18],  # deltaR_bb1 and deltaR_bb2 are highly correlated, so we just take one of them
+    "hh_angles": [27,30], #deltaphihh and deltaeta_hh
+    # combined models
+    "m4b_pt_h": [24, 25, 26],
+    "top3_custom": [24, 17, 18]
 } 
 
 selected_features = feature_sets[args.feature_mode]
